@@ -7,6 +7,8 @@ Runing The App
 
 git clone
 
+in the project folder
+
 cd server
 
 npm install
