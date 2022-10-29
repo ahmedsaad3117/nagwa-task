@@ -1,5 +1,5 @@
 import QuestionCard from "../../components/QuestionCard/QuestionCard";
-import classes from './Home.module.css'
+import classes from "./Home.module.css";
 const Home = () => {
   return (
     <section className={classes.home}>

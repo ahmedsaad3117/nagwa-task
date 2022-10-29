@@ -13,18 +13,24 @@ const FinalScore = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  //Getting the user score
   const finelResult = useSelector((state) => state.rank.userRank);
   const [rank, setRank] = useState(0);
 
   const resetHandler = () => {
+    //To reset the store (redux) to the initial state
     dispatch(wordActions.reset());
     dispatch(rankActions.reset());
+
+    //Fire a new request to get new words
     dispatch(getWordsData());
 
+    //To navigate to the home page
     navigate("/");
   };
 
   useEffect(() => {
+    //fire a request to calculate the user rank 
     axiosServices.post("/rank", { score: finelResult }).then((res) => {
       const finelRank = res.data;
       setRank(finelRank.data);
