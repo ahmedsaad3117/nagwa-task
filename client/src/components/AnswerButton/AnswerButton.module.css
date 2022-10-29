@@ -1,0 +1,9 @@
+.button_answer{
+    font-size: 1eem;
+    font-weight: bold;
+    border: none;
+    margin: .2rem;
+    width: 6em;
+    border-radius: 6px;
+    padding: .8em ;
+}

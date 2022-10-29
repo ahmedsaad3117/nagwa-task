@@ -1,0 +1,5 @@
+.progress_section progress {
+  inline-size: 100%;
+  block-size: 4rem;
+  margin: 1rem 0 .5rem;
+}
