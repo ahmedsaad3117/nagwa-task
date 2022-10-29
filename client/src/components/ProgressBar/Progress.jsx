@@ -1,13 +1,13 @@
 import classes from "./Progress.module.css";
 
-const Progress = ({ currentQuestion, words }) => {
+const Progress = ({ currentQuestionNumber, wordsLength }) => {
   return (
     <section className={classes.progress_section}>
-      <progress value={currentQuestion + 1} max={words.length}>
-        {currentQuestion * 10} %
+      <progress value={currentQuestionNumber + 1} max={wordsLength}>
+        {currentQuestionNumber * 10} %
       </progress>
       <span className="question-number">
-        {currentQuestion + 1} / {words && words.length}
+        {currentQuestionNumber + 1} / {wordsLength}
       </span>
     </section>
   );
