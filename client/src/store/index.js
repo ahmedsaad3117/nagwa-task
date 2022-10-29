@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import wordSlice from "./words-slice";
+import rankSlice from "./rank-slice";
 
 const store = configureStore({
-    reducer:{words : wordSlice.reducer}
+    reducer:{words : wordSlice.reducer ,rank: rankSlice.reducer }
 })
 
 export default store

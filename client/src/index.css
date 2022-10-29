@@ -10,7 +10,7 @@ html {
 
 body {
   margin: 0;
-  background-color: #4DAADD;
+  background-color: #4daadd;
 
   margin: 0;
   padding: 0;
@@ -29,16 +29,6 @@ body {
   width: 100%;
   block-size: 100vh;
 }
-
-/* button {
-  font: inherit;
-  cursor: pointer;
-  padding: 0.5rem 1.5rem;
-  border-radius: 6px;
-  background-color: transparent;
-  color: #1a8ed1;
-  border: 1px solid #1a8ed1;
-} */
 
 button:hover,
 button:active {

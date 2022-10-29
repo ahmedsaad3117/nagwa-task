@@ -1,0 +1,17 @@
+.fienl_result {
+  text-align: center;
+}
+.fienl_result button {
+  margin: auto;
+  font-size: 2.5em;
+  font-weight: bold;
+  border: none;
+  margin: 0.2rem;
+  width: 20em;
+  border-radius: 6px;
+  padding: 0.8em;
+}
+
+.fienl_result h1 {
+  font-size: 2.5em;
+}

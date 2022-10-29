@@ -1,99 +1,29 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const wordList = [
-  {
-    id: 1,
-    word: "slowly",
-    pos: "adverb",
-  },
-  {
-    id: 2,
-    word: "ride",
-    pos: "verb",
-  },
-  {
-    id: 3,
-    word: "bus",
-    pos: "noun",
-  },
-  {
-    id: 4,
-    word: "commute",
-    pos: "verb",
-  },
-  {
-    id: 5,
-    word: "emissions",
-    pos: "noun",
-  },
-  {
-    id: 6,
-    word: "walk",
-    pos: "verb",
-  },
-  {
-    id: 7,
-    word: "fast",
-    pos: "adjective",
-  },
-  {
-    id: 8,
-    word: "car",
-    pos: "noun",
-  },
-  {
-    id: 9,
-    word: "crowded",
-    pos: "adjective",
-  },
-  {
-    id: 10,
-    word: "arrival",
-    pos: "noun",
-  },
-  {
-    id: 11,
-    word: "emit",
-    pos: "verb",
-  },
-  {
-    id: 12,
-    word: "independent",
-    pos: "adjective",
-  },
-  {
-    id: 13,
-    word: "convenient",
-    pos: "adjective",
-  },
-  {
-    id: 14,
-    word: "lane",
-    pos: "noun",
-  },
-  {
-    id: 15,
-    word: "heavily",
-    pos: "adverb",
-  },
-];
+const initialState= {
+  wordList: [],
+  counter: 0,
+  wordListLength: 0,
+  currentWord: {},
+  options: ["Noun", "Adverb", "Adjective", "Verb"],
+}
 
 const wordSlice = createSlice({
   name: "words",
-  initialState: {
-    wordList,
-    counter: 0,
-    wordListLength: wordList.length,
-    currentWord: wordList[0],
-    options: ["Verb", "Adverb", "Noun", "Adjective"],
-  },
+  initialState ,
   reducers: {
+    setWordsData(state, action) {
+      state.wordList = action.payload.data;
+      state.wordListLength = action.payload.data.length;
+      state.currentWord = state.wordList[0];
+    },
     getNextWord(state) {
-      if (state.counter < wordList.length - 1) {
+      if (state.counter < state.wordList.length - 1) {
         state.counter++;
         state.currentWord = state.wordList[state.counter];
       }
     },
+    reset: () => initialState,
   },
 });
 

@@ -1,9 +1,23 @@
-.button_answer{
-    font-size: 1eem;
-    font-weight: bold;
-    border: none;
-    margin: .2rem;
-    width: 6em;
-    border-radius: 6px;
-    padding: .8em ;
+.button_answer {
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  margin: 0.2rem;
+  width: 10em;
+  border-radius: 6px;
+  padding: 0.8em;
+}
+
+.button_answer span {
+  border-radius: 50%;
+  padding: 0.17rem 0.17rem;
+  color: #1d1d1d;
+  margin-left: 0.2em;
+}
+
+.correct {
+  background-color: #1ad1b9;
+}
+.false {
+  background-color: #d11a1a;
 }
